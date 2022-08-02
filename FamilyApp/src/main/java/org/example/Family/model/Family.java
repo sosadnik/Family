@@ -12,6 +12,13 @@ import javax.persistence.*;
 @AllArgsConstructor
 public class Family {
 
+    public Family(String familyName, int nrOfInfants, int nrOfChildren, int nrOfAdults) {
+        this.familyName = familyName;
+        this.nrOfInfants = nrOfInfants;
+        this.nrOfChildren = nrOfChildren;
+        this.nrOfAdults = nrOfAdults;
+    }
+
     @Id
     @SequenceGenerator(
             name = "id_sequence",
