@@ -1,0 +1,17 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: FamilyMemberApp
+  datasource:
+    username: "postgres"
+    url: jdbc:postgresql://127.0.0.1:5432/FamilyMemberDB
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+    show-sql: true
