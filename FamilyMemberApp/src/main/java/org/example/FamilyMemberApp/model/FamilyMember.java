@@ -12,6 +12,12 @@ import javax.persistence.*;
 @NoArgsConstructor
 public class FamilyMember {
 
+    public FamilyMember(Long familyId, String familyName, String givenName) {
+        this.familyId = familyId;
+        this.familyName = familyName;
+        this.givenName = givenName;
+    }
+
     @Id
     @SequenceGenerator(
             name = "id_sequence",
@@ -23,6 +29,6 @@ public class FamilyMember {
     )
     private Long id;
     private Long familyId;
-    private String givenName;
     private String familyName;
+    private String givenName;
 }

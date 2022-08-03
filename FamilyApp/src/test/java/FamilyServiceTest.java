@@ -1,5 +1,6 @@
+import org.example.Family.client.ClientFamilyMember;
 import org.example.Family.controller.dto.FamilyDto;
-import org.example.Family.model.FamilyMember;
+import org.example.Family.controller.dto.FamilyMemberDto;
 import org.example.Family.repository.FamilyRepository;
 import org.example.Family.service.FamilyService;
 import org.junit.jupiter.api.BeforeEach;
@@ -19,17 +20,18 @@ public class FamilyServiceTest {
     @BeforeEach
     public void setup(){
         FamilyRepository repository = mock(FamilyRepository.class);
-        service = new FamilyService(repository);
+        ClientFamilyMember clientFamilyMember = mock(ClientFamilyMember.class);
+        service = new FamilyService(repository, clientFamilyMember);
     }
 
     @Test
     void validateFamilyData_shouldReturnFalseForIncorrectNumberOfAdults(){
-        List<FamilyMember> memberList = new ArrayList<>();
-        memberList.add(new FamilyMember("Artur", "Nowak", 4));
-        memberList.add(new FamilyMember("Andrzej", "Nowak", 16));
-        memberList.add(new FamilyMember("Antonina", "Nowak", 24));
-        memberList.add(new FamilyMember("Agnieszka", "Nowak", 34));
-        memberList.add(new FamilyMember("Anna", "Nowak", 34));
+        List<FamilyMemberDto> memberList = new ArrayList<>();
+        memberList.add(new FamilyMemberDto("Artur", "Nowak", 4));
+        memberList.add(new FamilyMemberDto("Andrzej", "Nowak", 16));
+        memberList.add(new FamilyMemberDto("Antonina", "Nowak", 24));
+        memberList.add(new FamilyMemberDto("Agnieszka", "Nowak", 34));
+        memberList.add(new FamilyMemberDto("Anna", "Nowak", 34));
         FamilyDto family = new FamilyDto("Nowak",1,1,2,memberList);
 
         boolean actual = service.validateFamilyData(family);
@@ -39,10 +41,10 @@ public class FamilyServiceTest {
 
     @Test
     void validateFamilyData_shouldReturnTrueForCorrectNumberOfInfants(){
-        List<FamilyMember> memberList = new ArrayList<>();
-        memberList.add(new FamilyMember("Artur", "Nowak", 4));
-        memberList.add(new FamilyMember("Andrzej", "Nowak", 1));
-        memberList.add(new FamilyMember("Antonina", "Nowak", 0));
+        List<FamilyMemberDto> memberList = new ArrayList<>();
+        memberList.add(new FamilyMemberDto("Artur", "Nowak", 4));
+        memberList.add(new FamilyMemberDto("Andrzej", "Nowak", 1));
+        memberList.add(new FamilyMemberDto("Antonina", "Nowak", 0));
         FamilyDto family = new FamilyDto("Nowak",3,0,0,memberList);
 
         boolean actual = service.validateFamilyData(family);
@@ -51,10 +53,10 @@ public class FamilyServiceTest {
     }
     @Test
     void validateFamilyData_shouldReturnFalseNotAssignPersonWithWrongAgeToAnyGroup(){
-        List<FamilyMember> memberList = new ArrayList<>();
-        memberList.add(new FamilyMember("Artur", "Nowak", -3));
-        memberList.add(new FamilyMember("Andrzej", "Nowak", 1));
-        memberList.add(new FamilyMember("Antonina", "Nowak", 0));
+        List<FamilyMemberDto> memberList = new ArrayList<>();
+        memberList.add(new FamilyMemberDto("Artur", "Nowak", -3));
+        memberList.add(new FamilyMemberDto("Andrzej", "Nowak", 1));
+        memberList.add(new FamilyMemberDto("Antonina", "Nowak", 0));
         FamilyDto family = new FamilyDto("Nowak",3,0,0,memberList);
 
         boolean actual = service.validateFamilyData(family);

@@ -1,14 +1,13 @@
-package org.example.Family.model;
+package org.example.FamilyMemberApp.controller.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
-@AllArgsConstructor
 @Getter
-public class FamilyMember {
+@AllArgsConstructor
+public class FamilyMemberDto {
 
     private Long familyId;
     private String givenName;
     private String familyName;
-
 }

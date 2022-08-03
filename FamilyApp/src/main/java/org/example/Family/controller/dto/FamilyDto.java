@@ -2,7 +2,7 @@ package org.example.Family.controller.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
-import org.example.Family.model.FamilyMember;
+
 
 import java.util.List;
 
@@ -14,5 +14,5 @@ public class FamilyDto {
     private int nrOfInfants;
     private int nrOfChildren;
     private int nrOfAdults;
-    private List<FamilyMember> familyMembers;
+    private List<FamilyMemberDto> familyMembers;
 }
