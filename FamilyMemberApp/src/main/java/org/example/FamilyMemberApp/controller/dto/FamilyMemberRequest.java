@@ -5,7 +5,7 @@ import lombok.Getter;
 
 @Getter
 @AllArgsConstructor
-public class FamilyMemberDto {
+public class FamilyMemberRequest {
 
     private Long familyId;
     private String givenName;

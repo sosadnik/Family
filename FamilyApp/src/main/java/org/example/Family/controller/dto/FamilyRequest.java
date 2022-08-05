@@ -8,11 +8,11 @@ import java.util.List;
 
 @AllArgsConstructor
 @Getter
-public class FamilyDto {
+public class FamilyRequest {
 
     private String familyName;
     private int nrOfInfants;
     private int nrOfChildren;
     private int nrOfAdults;
-    private List<FamilyMemberDto> familyMembers;
+    private List<FamilyMemberRequest> familyMembers;
 }
