@@ -3,13 +3,16 @@ package org.example.FamilyMemberApp.model;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 import javax.persistence.*;
 
 @Entity
 @Getter
+@Table
 @AllArgsConstructor
 @NoArgsConstructor
+@ToString
 public class FamilyMember {
 
     public FamilyMember(Long familyId, String familyName, String givenName) {

@@ -2,9 +2,11 @@ package org.example.FamilyMemberApp.controller.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 
-@Getter
 @AllArgsConstructor
+@NoArgsConstructor
+@Getter
 public class FamilyMemberRequest {
 
     private Long familyId;

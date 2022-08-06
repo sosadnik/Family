@@ -26,16 +26,17 @@ public class FamilyMemberService {
 
     public List<FamilyMemberRespond> getFamilyMemberList(Long familyId) {
         List<FamilyMember> allByFamilyId = repository.findAllByFamilyId(familyId);
-        List<FamilyMemberRespond> familyMemberResponds = new ArrayList<>();
+        List<FamilyMemberRespond> familyMemberRespondList = new ArrayList<>();
 
         for (FamilyMember member : allByFamilyId) {
-            familyMemberResponds.add(new FamilyMemberRespond(
+            familyMemberRespondList.add(new FamilyMemberRespond(
                     member.getId(),
                     member.getFamilyId(),
                     member.getFamilyName(),
                     member.getGivenName()
             ));
         }
-        return familyMemberResponds;
+
+        return familyMemberRespondList;
     }
 }

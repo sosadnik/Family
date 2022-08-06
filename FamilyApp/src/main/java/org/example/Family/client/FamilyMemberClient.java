@@ -7,27 +7,27 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
+import java.net.URI;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
 
 @Component
 @RequiredArgsConstructor
-public class ClientFamilyMember {
+public class FamilyMemberClient {
 
     private final RestTemplate restTemplate;
 
-    public void createFamilyMember(FamilyMember familyMember){
+    public void createFamilyMember(FamilyMember familyMember) {
         restTemplate.postForLocation(
                 "http://localhost:8081/createFamilyMember",
                 familyMember
         );
     }
 
-    public List<FamilyMemberRespond> getFamilyMemberList(Long familyId){
-        ResponseEntity<FamilyMemberRespond[]> responseEntity = restTemplate.postForEntity(
-                "http://localhost:8081/getFamilyMember",
-                familyId,
+    public List<FamilyMemberRespond> getFamilyMemberList(Long familyId) {
+        ResponseEntity<FamilyMemberRespond[]> responseEntity = restTemplate.getForEntity(
+                "http://localhost:8081/getFamilyMember?familyId="+ familyId,
                 FamilyMemberRespond[].class
         );
         return Arrays.asList(Objects.requireNonNull(responseEntity.getBody()));

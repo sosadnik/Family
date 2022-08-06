@@ -1,6 +1,7 @@
 package org.example.Family.model;
 
 import lombok.AllArgsConstructor;
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
@@ -10,6 +11,7 @@ import javax.persistence.*;
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
+@EqualsAndHashCode
 public class Family {
 
     public Family(String familyName, int nrOfInfants, int nrOfChildren, int nrOfAdults) {

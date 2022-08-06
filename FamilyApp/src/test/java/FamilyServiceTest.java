@@ -1,4 +1,4 @@
-import org.example.Family.client.ClientFamilyMember;
+import org.example.Family.client.FamilyMemberClient;
 import org.example.Family.controller.dto.FamilyRequest;
 import org.example.Family.controller.dto.FamilyMemberRequest;
 import org.example.Family.repository.FamilyRepository;
@@ -20,8 +20,8 @@ public class FamilyServiceTest {
     @BeforeEach
     public void setup(){
         FamilyRepository repository = mock(FamilyRepository.class);
-        ClientFamilyMember clientFamilyMember = mock(ClientFamilyMember.class);
-        service = new FamilyService(repository, clientFamilyMember);
+        FamilyMemberClient familyMemberClient = mock(FamilyMemberClient.class);
+        service = new FamilyService(repository, familyMemberClient);
     }
 
     @Test

@@ -1,7 +1,7 @@
 package org.example.Family.service;
 
 import lombok.RequiredArgsConstructor;
-import org.example.Family.client.ClientFamilyMember;
+import org.example.Family.client.FamilyMemberClient;
 import org.example.Family.controller.dto.FamilyRequest;
 import org.example.Family.controller.dto.FamilyMemberRequest;
 import org.example.Family.controller.dto.FamilyMemberRespond;
@@ -21,7 +21,7 @@ import java.util.Optional;
 public class FamilyService {
 
     private final FamilyRepository repository;
-    private final ClientFamilyMember client;
+    private final FamilyMemberClient client;
 
     @Transactional
     public Long createFamily(FamilyRequest request) {

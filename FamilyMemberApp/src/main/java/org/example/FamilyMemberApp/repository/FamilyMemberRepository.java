@@ -9,5 +9,5 @@ import java.util.List;
 @Repository
 public interface FamilyMemberRepository extends JpaRepository<FamilyMember, Long> {
 
-    List<FamilyMember> findAllByFamilyId(Long id);
+    List<FamilyMember> findAllByFamilyId(Long familyId);
 }
