@@ -1,0 +1,342 @@
+{
+	"info": {
+		"_postman_id": "b139c2f9-359f-4d0f-ae9d-b9a3429e0c4b",
+		"name": "familyCollection ",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/CreateFamily",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"user-agent": true,
+					"accept-encoding": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"familyMembers\": [\r\n    {\r\n      \"age\": 1,\r\n      \"familyName\": \"Nowak\",\r\n      \"givenName\": \"Artur\"\r\n    },\r\n {\r\n      \"age\": 0,\r\n      \"familyName\": \"Nowak\",\r\n      \"givenName\": \"Andrzej\"\r\n    },\r\n {\r\n      \"age\": 12,\r\n      \"familyName\": \"Nowak\",\r\n      \"givenName\": \"Antonina\"\r\n    },\r\n {\r\n      \"age\": 16,\r\n      \"familyName\": \"Nowak\",\r\n      \"givenName\": \"Agnieszka\"\r\n    },\r\n {\r\n      \"age\": 36,\r\n      \"familyName\": \"Nowak\",\r\n      \"givenName\": \"Anna\"\r\n    },\r\n {\r\n      \"age\": 40,\r\n      \"familyName\": \"Nowak\",\r\n      \"givenName\": \"Alicja\"\r\n    }\r\n  ],\r\n  \"familyName\": \"Nowak\",\r\n  \"nrOfAdults\": 2,\r\n  \"nrOfChildren\": 2,\r\n  \"nrOfInfants\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/CreateFamily",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"CreateFamily"
+					]
+				},
+				"description": "Create family Nowak"
+			},
+			"response": [
+				{
+					"name": "http://localhost:8080/CreateFamily",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"familyMembers\": [\r\n    {\r\n      \"age\": 1,\r\n      \"familyName\": \"Nowak\",\r\n      \"givenName\": \"Artur\"\r\n    },\r\n {\r\n      \"age\": 0,\r\n      \"familyName\": \"Nowak\",\r\n      \"givenName\": \"Andrzej\"\r\n    },\r\n {\r\n      \"age\": 12,\r\n      \"familyName\": \"Nowak\",\r\n      \"givenName\": \"Antonina\"\r\n    },\r\n {\r\n      \"age\": 16,\r\n      \"familyName\": \"Nowak\",\r\n      \"givenName\": \"Agnieszka\"\r\n    },\r\n {\r\n      \"age\": 36,\r\n      \"familyName\": \"Nowak\",\r\n      \"givenName\": \"Anna\"\r\n    },\r\n {\r\n      \"age\": 40,\r\n      \"familyName\": \"Nowak\",\r\n      \"givenName\": \"Alicja\"\r\n    }\r\n  ],\r\n  \"familyName\": \"Nowak\",\r\n  \"nrOfAdults\": 2,\r\n  \"nrOfChildren\": 2,\r\n  \"nrOfInfants\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/CreateFamily",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"CreateFamily"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 07 Aug 2022 14:59:14 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "1"
+				}
+			]
+		},
+		{
+			"name": "http://localhost:8080/CreateFamily",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"familyMembers\": [\r\n    {\r\n      \"age\": 1,\r\n      \"familyName\": \"Kowalski\",\r\n      \"givenName\": \"Kacper\"\r\n    },\r\n {\r\n      \"age\": 0,\r\n      \"familyName\": \"Kowalski\",\r\n      \"givenName\": \"Kajetan\"\r\n    },\r\n {\r\n      \"age\": 2,\r\n      \"familyName\": \"Kowalski\",\r\n      \"givenName\": \"Kamil\"\r\n    },\r\n {\r\n      \"age\": 16,\r\n      \"familyName\": \"Kowalski\",\r\n      \"givenName\": \"Karina\"\r\n    },\r\n {\r\n      \"age\": 12,\r\n      \"familyName\": \"Kowalski\",\r\n      \"givenName\": \"Karolina\"\r\n    }\r\n\r\n  ],\r\n  \"familyName\": \"Kowalski\",\r\n  \"nrOfAdults\": 0,\r\n  \"nrOfChildren\": 2,\r\n  \"nrOfInfants\": 3\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/CreateFamily",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"CreateFamily"
+					]
+				},
+				"description": "Create family kowalski"
+			},
+			"response": [
+				{
+					"name": "http://localhost:8080/CreateFamily",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"familyMembers\": [\r\n    {\r\n      \"age\": 1,\r\n      \"familyName\": \"Kowalski\",\r\n      \"givenName\": \"Kacper\"\r\n    },\r\n {\r\n      \"age\": 0,\r\n      \"familyName\": \"Kowalski\",\r\n      \"givenName\": \"Kajetan\"\r\n    },\r\n {\r\n      \"age\": 2,\r\n      \"familyName\": \"Kowalski\",\r\n      \"givenName\": \"Kamil\"\r\n    },\r\n {\r\n      \"age\": 16,\r\n      \"familyName\": \"Kowalski\",\r\n      \"givenName\": \"Karina\"\r\n    },\r\n {\r\n      \"age\": 12,\r\n      \"familyName\": \"Kowalski\",\r\n      \"givenName\": \"Karolina\"\r\n    }\r\n\r\n  ],\r\n  \"familyName\": \"Kowalski\",\r\n  \"nrOfAdults\": 0,\r\n  \"nrOfChildren\": 2,\r\n  \"nrOfInfants\": 3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/CreateFamily",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"CreateFamily"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 07 Aug 2022 14:59:17 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "2"
+				}
+			]
+		},
+		{
+			"name": "http://localhost:8080/GetFamily?familyId=1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/GetFamily?familyId=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"GetFamily"
+					],
+					"query": [
+						{
+							"key": "familyId",
+							"value": "1"
+						}
+					]
+				},
+				"description": "Get family id=1"
+			},
+			"response": [
+				{
+					"name": "http://localhost:8080/GetFamily?familyId=1",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/GetFamily?familyId=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"GetFamily"
+							],
+							"query": [
+								{
+									"key": "familyId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 07 Aug 2022 14:59:22 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 1,\n    \"familyName\": \"Nowak\",\n    \"nrOfInfants\": 2,\n    \"nrOfChildren\": 2,\n    \"nrOfAdults\": 2,\n    \"familyMemberList\": [\n        {\n            \"id\": 1,\n            \"familyId\": 1,\n            \"givenName\": \"Nowak\",\n            \"familyName\": \"Artur\"\n        },\n        {\n            \"id\": 2,\n            \"familyId\": 1,\n            \"givenName\": \"Nowak\",\n            \"familyName\": \"Andrzej\"\n        },\n        {\n            \"id\": 3,\n            \"familyId\": 1,\n            \"givenName\": \"Nowak\",\n            \"familyName\": \"Antonina\"\n        },\n        {\n            \"id\": 4,\n            \"familyId\": 1,\n            \"givenName\": \"Nowak\",\n            \"familyName\": \"Agnieszka\"\n        },\n        {\n            \"id\": 5,\n            \"familyId\": 1,\n            \"givenName\": \"Nowak\",\n            \"familyName\": \"Anna\"\n        },\n        {\n            \"id\": 6,\n            \"familyId\": 1,\n            \"givenName\": \"Nowak\",\n            \"familyName\": \"Alicja\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "http://localhost:8080/GetFamily?familyId=2",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/GetFamily?familyId=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"GetFamily"
+					],
+					"query": [
+						{
+							"key": "familyId",
+							"value": "2"
+						}
+					]
+				},
+				"description": "Get family id=2"
+			},
+			"response": [
+				{
+					"name": "http://localhost:8080/GetFamily?familyId=2",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/GetFamily?familyId=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"GetFamily"
+							],
+							"query": [
+								{
+									"key": "familyId",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 07 Aug 2022 14:59:30 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 2,\n    \"familyName\": \"Kowalski\",\n    \"nrOfInfants\": 3,\n    \"nrOfChildren\": 2,\n    \"nrOfAdults\": 0,\n    \"familyMemberList\": [\n        {\n            \"id\": 7,\n            \"familyId\": 2,\n            \"givenName\": \"Kowalski\",\n            \"familyName\": \"Kacper\"\n        },\n        {\n            \"id\": 8,\n            \"familyId\": 2,\n            \"givenName\": \"Kowalski\",\n            \"familyName\": \"Kajetan\"\n        },\n        {\n            \"id\": 9,\n            \"familyId\": 2,\n            \"givenName\": \"Kowalski\",\n            \"familyName\": \"Kamil\"\n        },\n        {\n            \"id\": 10,\n            \"familyId\": 2,\n            \"givenName\": \"Kowalski\",\n            \"familyName\": \"Karina\"\n        },\n        {\n            \"id\": 11,\n            \"familyId\": 2,\n            \"givenName\": \"Kowalski\",\n            \"familyName\": \"Karolina\"\n        }\n    ]\n}"
+				}
+			]
+		}
+	]
+}
