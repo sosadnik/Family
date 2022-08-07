@@ -20,14 +20,14 @@ public class FamilyMemberClient {
 
     public void createFamilyMember(FamilyMember familyMember) {
         restTemplate.postForLocation(
-                "http://localhost:8081/createFamilyMember",
+                "http://familymemberapp:8081/createFamilyMember",
                 familyMember
         );
     }
 
     public List<FamilyMemberRespond> getFamilyMemberList(Long familyId) {
         ResponseEntity<FamilyMemberRespond[]> responseEntity = restTemplate.getForEntity(
-                "http://localhost:8081/getFamilyMember?familyId="+ familyId,
+                "http://familymemberapp:8081/getFamilyMember?familyId="+ familyId,
                 FamilyMemberRespond[].class
         );
         return Arrays.asList(Objects.requireNonNull(responseEntity.getBody()));

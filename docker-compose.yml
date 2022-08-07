@@ -1,0 +1,46 @@
+services:
+  familyapp:
+    build: ./FamilyApp
+    container_name: FamilyApp
+    depends_on:
+      - postgres
+      - familymemberapp
+    ports:
+      - "8080:8080"
+    networks:
+      - postgres
+
+  familymemberapp:
+    build: ./FamilyMemberApp
+    container_name: FamilyMemberApp
+    depends_on:
+      - postgres
+    ports:
+      - "8081:8081"
+    networks:
+      - postgres
+
+  postgres:
+    container_name: postgres
+    image: postgres
+    environment:
+      POSTGRES_USER: sebastian
+      POSTGRES_PASSWORD: password
+      POSTGRES_MULTIPLE_DATABASES: familydb, familymemberdb
+      PGDATA: /data/postgres
+    volumes:
+      - postgres:/data/postgres
+      - ./pg-init-scripts:/docker-entrypoint-initdb.d
+    ports:
+      - "5432:5432"
+    networks:
+      - postgres
+    restart: unless-stopped
+
+networks:
+  postgres:
+    driver: bridge
+
+volumes:
+  postgres:
+

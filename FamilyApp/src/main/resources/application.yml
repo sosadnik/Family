@@ -5,8 +5,9 @@ spring:
   application:
     name: FamilyApp
   datasource:
-    username: "postgres"
-    url: jdbc:postgresql://127.0.0.1:5432/FamilyDB
+    username: "sebastian"
+    password: "password"
+    url: jdbc:postgresql://postgres:5432/familydb
   jpa:
     hibernate:
       ddl-auto: update
