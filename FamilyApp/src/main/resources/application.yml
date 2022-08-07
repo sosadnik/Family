@@ -5,8 +5,8 @@ spring:
   application:
     name: FamilyApp
   datasource:
-    username: "sebastian"
-    password: "password"
+    username: sebastian
+    password: password
     url: jdbc:postgresql://postgres:5432/familydb
   jpa:
     hibernate:
